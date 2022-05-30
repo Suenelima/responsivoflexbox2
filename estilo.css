@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*menu principal começou*/
+body {
+    font-size: 1em;
+    background-image: rgb(234, 245, 234);
+    
+    font-weight: normal;
+}
+
+body p {
+    text-align: justify;
+    padding: 10px 0px 10px 0px;
+}
+
+
+/* MENU NAV*/
+* #navegação-principal {
+    width: 100%;
+    display: inline;
+    cursor: pointer;
+    opacity: 1;
+}
+#menu-principal li ul li {
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+}
+#menu-principal li {
+    width: 20%;
+    display: block;
+    float: left;
+    padding: 15px 0px 10px 0px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    text-align: center;
+    background-color: violet;
+}
+
+#menu-principal a {
+    text-decoration: none;
+    color: rgb(14, 14, 15);
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+
+/*incio do menu dropdown*/
+.dropdown {
+    visibility: hidden;
+    position: absolute;
+    transition: absolute;
+    transition: all 0.5 ease;
+    margin-top: 10px;
+    /*width: auto;*/
+}
+
+.dropdown li {
+    clear: both;
+}
+
+#menu-principal li:hover,
+#menu-principal li:focus-within,
+#menu-principal li a:hover {
+    background-color: rgb(233, 47, 177);
+    color: rgb(14, 14, 15);
+}
+
+#menu-principal li:hover>ul,
+.dropdown ul:hover,
+.dropdown ul:focus {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/*fim do menu dropdow*/
+
+
+/*CORPO PRINCIPAL*/
+main {
+    background-color: rgba(196, 48, 196, 0.8);
+    margin: auto;
+    padding-top: 50px;
+    max-width: 800px;
+    min-width: 280px;
+}
+
+img {
+    display: flex;
+    margin: auto;
+}
+
+
+/*corpo do flex-box*/
+h1 {
+    text-align: center;
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/* [flex box] configurando o pai*/
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* [flex box] configurando o itens*/
+.itens {
+    padding: 10px;
+    margin: 10px;
+    background: violet;
+    flex: 300px;
+
+}
+
+
+
+
+/* configurando RODA PE*/
+footer p {
+    text-align: center;
+    
+}
+
+/* para TELEFONE*/
+@media screen and (max-width:480px) {
+    body {
+        font-size: 0.85em;
+          
+    }
+    main{
+        background-color: aqua; 
+    }
+    .pai{
+        background-color: rgb(0, 38, 255); 
+    }
+    .itens{
+        background-color: rgb(0, 255, 106); 
+    }
+    .itens p{
+        background-color: rgb(225, 0, 255); 
+    }
+    
+    
+
+}
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 1em;   
+    }
+    
+
+
+}
+
